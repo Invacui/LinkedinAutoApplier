@@ -81,7 +81,7 @@ class CVParser:
         if not self._path.exists():
             raise FileNotFoundError(f"CV not found: {self._path}")
 
-        logger.info("Parsing CV: %s", self._path)
+        logger.info("Parsing CV: %s", self._path.name)
         doc = fitz.open(str(self._path))
         pages_text: list[str] = []
         for page in doc:
@@ -108,7 +108,7 @@ class CVParser:
 
         # Name — first non-empty line that is NOT an email/phone
         for line in lines[:5]:
-            if not re.search(r"[@\+\d{5,}]", line):
+            if not re.search(r"[@+]|\d{5,}", line):
                 cv.name = line
                 break
 

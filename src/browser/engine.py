@@ -100,6 +100,9 @@ class BrowserEngine:
             args=[
                 "--disable-blink-features=AutomationControlled",  # Critical — hides automation
                 "--disable-infobars",
+                # --no-sandbox disables Chrome's process sandbox. Only safe inside
+                # a container/VM where the host OS is already isolated.  Remove
+                # this flag if running directly on a personal machine.
                 "--no-sandbox",
             ],
             ignore_default_args=["--enable-automation"],  # Remove automation flag

@@ -1,16 +1,13 @@
 # Secrets — never commit
 .env
 
-# Sessions (contains cookies/credentials)
-sessions/
+# Sessions (keep directory, ignore content — contains sensitive cookies)
+sessions/*
+!sessions/.gitkeep
 
 # Output logs (keep directory, ignore content)
 logs/*
 !logs/.gitkeep
-
-# Sessions (keep directory, ignore content — contains sensitive cookies)
-sessions/*
-!sessions/.gitkeep
 
 # Python
 __pycache__/

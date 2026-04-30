@@ -169,14 +169,14 @@ class FormFiller:
         elif ft == FieldType.CHECKBOX:
             answer = self._ai.get_answer(form_field.label, ft,
                                          job_description=job_description)
-            if answer.lower() == "check" and not form_field.locator.is_checked():
+            if answer and answer.lower() == "check" and not form_field.locator.is_checked():
                 # LinkedIn requires a click (not a programmatic check) to register
                 form_field.locator.click()
 
     def _fill_file_upload(self, form_field: FormField) -> None:
         """Upload the CV PDF to a file-upload input."""
         if not self._cv_path.exists():
-            logger.error("CV file not found at %s — skipping upload", self._cv_path)
+            logger.error("CV file not found at %s — skipping upload", self._cv_path.name)
             return
         form_field.locator.set_input_files(str(self._cv_path))
         logger.info("Uploaded CV: %s", self._cv_path.name)

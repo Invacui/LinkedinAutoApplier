@@ -14,6 +14,7 @@ from __future__ import annotations
 import json
 import logging
 import os
+import random
 import sys
 import time
 from pathlib import Path
@@ -244,7 +245,7 @@ def main() -> None:
             # Delay between jobs — reduces bot detection risk
             if idx < len(pending_jobs):
                 delay_s = int(
-                    __import__("random").uniform(
+                    random.uniform(
                         int(env["delay_min"]), int(env["delay_max"])
                     )
                 )

@@ -1,0 +1,7 @@
+playwright==1.44.0
+playwright-stealth==1.0.6
+PyMuPDF==1.24.3
+anthropic==0.28.0
+python-dotenv==1.0.1
+tenacity==8.3.0
+rich==13.7.1

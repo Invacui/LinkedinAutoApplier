@@ -1,0 +1,46 @@
+{
+  "personal": {
+    "full_name": "Priya Sharma",
+    "email": "priya@gmail.com",
+    "phone": "+91-98765-43210",
+    "city": "Delhi",
+    "linkedin_url": "https://linkedin.com/in/priya-sharma"
+  },
+  "work_authorization": {
+    "authorized_to_work_in_india": true,
+    "requires_visa_sponsorship": false,
+    "willing_to_relocate": true,
+    "preferred_locations": ["Delhi", "Bangalore", "Remote"]
+  },
+  "employment": {
+    "notice_period_days": 60,
+    "notice_period_text": "60 days (negotiable to 30)",
+    "willing_to_work_remote": true,
+    "willing_to_work_hybrid": true
+  },
+  "compensation": {
+    "current_ctc_inr_lpa": 18,
+    "expected_ctc_inr_lpa": 24,
+    "open_to_negotiation": true
+  },
+  "experience": {
+    "total_years": 5,
+    "primary_role": "Full Stack Software Engineer",
+    "current_company": "Infosys Ltd"
+  },
+  "education": {
+    "highest_degree": "B.Tech",
+    "field": "Computer Science",
+    "university": "Delhi Technological University",
+    "graduation_year": 2019
+  },
+  "compliance": {
+    "background_check_consent": true,
+    "drug_test_consent": true
+  },
+  "cover_letter": {
+    "use_ai_generated": true,
+    "tone": "professional and enthusiastic",
+    "max_words": 150
+  }
+}

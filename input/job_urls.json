@@ -1,0 +1,24 @@
+{
+  "metadata": {
+    "description": "LinkedIn Easy Apply URLs — only add Easy Apply jobs",
+    "last_updated": "2025-01-15"
+  },
+  "jobs": [
+    {
+      "id": "job_001",
+      "url": "https://www.linkedin.com/jobs/view/3789456123",
+      "company": "Acme Corp",
+      "title": "Senior Software Engineer",
+      "priority": "high",
+      "notes": "Referral from John — mention his name"
+    },
+    {
+      "id": "job_002",
+      "url": "https://www.linkedin.com/jobs/view/3791234567",
+      "company": "TechStartup Ltd",
+      "title": "Full Stack Developer",
+      "priority": "medium",
+      "notes": ""
+    }
+  ]
+}

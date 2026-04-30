@@ -1,0 +1,39 @@
+# Secrets — never commit
+.env
+
+# Sessions (keep directory, ignore content — contains sensitive cookies)
+sessions/*
+!sessions/.gitkeep
+
+# Output logs (keep directory, ignore content)
+logs/*
+!logs/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+venv/
+.venv/
+env/
+ENV/
+
+# Playwright
+playwright/.auth/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Test artifacts
+.pytest_cache/
+.coverage
+htmlcov/

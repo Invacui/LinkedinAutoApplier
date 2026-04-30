@@ -130,13 +130,16 @@ class FieldDetector:
             options: list[str] = []
             for radio in radios:
                 rid = radio.get_attribute("id") or ""
+                opt_text = ""
                 if rid:
                     option_label = self._page.locator(f'label[for="{rid}"]')
                     if option_label.count():
-                        options.append(option_label.first.inner_text().strip())
-                # Fallback: value attribute
-                if not options or options[-1] == "":
-                    options[-1] = radio.get_attribute("value") or ""
+                        opt_text = option_label.first.inner_text().strip()
+                # Fallback: use the value attribute when no label is found
+                if not opt_text:
+                    opt_text = radio.get_attribute("value") or ""
+                if opt_text:
+                    options.append(opt_text)
 
             # Use the first radio's locator as the group representative
             group_locator = fieldset.locator('input[type="radio"]').first
